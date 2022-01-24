@@ -9,7 +9,7 @@ properties: # Properties of container group
   containers: # Array of container instances in the group
   - name: hadoop-namenode # Name of an instance
     properties: # Properties of an instance
-      image: nikolaitestacr.azurecr.io/hadoop-namenode:v1 # Container image used to create the instance
+      image: nikolaitestacr.azurecr.io/hadoop-name-node:v1 # Container image used to create the instance
       #command:
       #- string
       ports: # External-facing ports exposed on the instance, must also be set in group ipAddress property 
@@ -27,8 +27,8 @@ properties: # Properties of container group
           #  count: integer
           #  sku: string
         limits:
-          memoryInGB: 1
-          cpu: 1
+          memoryInGB: 2
+          cpu: 2
           #gpu:
           #  count: integer
           #  sku: string
@@ -68,10 +68,10 @@ properties: # Properties of container group
       #  failureThreshold: integer
       #  successThreshold: integer
       #  timeoutSeconds: integer
-  #imageRegistryCredentials: # Credentials to pull a private image
-  #- server: string
-  #  username: string
-  #  password: string
+  imageRegistryCredentials: # Credentials to pull a private image
+  - server: nikolaitestacr.azurecr.io
+    username: nikolaitestacr
+    password: "BexuRFoywu1SoFOiUj+tDzJUK/oLX7MG"
   #  identity: string
   #  identityUrl: string
   #restartPolicy: string
