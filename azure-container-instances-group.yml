@@ -9,7 +9,7 @@ properties: # Properties of container group
   containers: # Array of container instances in the group
   - namenode: string # Name of an instance
     properties: # Properties of an instance
-      image: hadoop-namenode:v1 # Container image used to create the instance
+      image: nikolaitestacr.azurecr.io/hadoop-namenode:v1 # Container image used to create the instance
       #command:
       #- string
       ports: # External-facing ports exposed on the instance, must also be set in group ipAddress property 
