@@ -7,7 +7,7 @@ tags: {}
 #  userAssignedIdentities: {}
 properties: # Properties of container group
   containers: # Array of container instances in the group
-  - namenode: string # Name of an instance
+  - name: hadoop-namenode # Name of an instance
     properties: # Properties of an instance
       image: nikolaitestacr.azurecr.io/hadoop-namenode:v1 # Container image used to create the instance
       #command:
